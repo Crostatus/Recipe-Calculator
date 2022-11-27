@@ -1,0 +1,9 @@
+M:\Recipe-Calculator\Calculator.DAL\obj\Debug\Calculator.DAL.csproj.AssemblyReference.cache
+M:\Recipe-Calculator\Calculator.DAL\obj\Debug\Calculator.DAL.csproj.CoreCompileInputs.cache
+M:\Recipe-Calculator\Calculator.DAL\bin\Debug\Calculator.MODEL.dll
+M:\Recipe-Calculator\Calculator.DAL\bin\Debug\Calculator.MODEL.pdb
+M:\Recipe-Calculator\Calculator.DAL\bin\Debug\Newtonsoft.Json.dll
+M:\Recipe-Calculator\Calculator.DAL\bin\Debug\Newtonsoft.Json.xml
+M:\Recipe-Calculator\Calculator.DAL\obj\Debug\Calculator.DAL.csproj.CopyComplete
+M:\Recipe-Calculator\Calculator.DAL\obj\Debug\Calculator.MODEL.dll
+M:\Recipe-Calculator\Calculator.DAL\obj\Debug\Calculator.MODEL.pdb

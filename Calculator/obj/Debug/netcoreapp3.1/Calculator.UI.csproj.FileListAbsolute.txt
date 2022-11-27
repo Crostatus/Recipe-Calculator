@@ -1,0 +1,16 @@
+M:\Recipe-Calculator\Calculator\bin\Debug\netcoreapp3.1\Calculator.UI.exe
+M:\Recipe-Calculator\Calculator\bin\Debug\netcoreapp3.1\Calculator.UI.deps.json
+M:\Recipe-Calculator\Calculator\bin\Debug\netcoreapp3.1\Calculator.UI.runtimeconfig.json
+M:\Recipe-Calculator\Calculator\bin\Debug\netcoreapp3.1\Calculator.UI.runtimeconfig.dev.json
+M:\Recipe-Calculator\Calculator\bin\Debug\netcoreapp3.1\Calculator.UI.dll
+M:\Recipe-Calculator\Calculator\bin\Debug\netcoreapp3.1\Calculator.UI.pdb
+M:\Recipe-Calculator\Calculator\obj\Debug\netcoreapp3.1\Calculator.UI.csproj.AssemblyReference.cache
+M:\Recipe-Calculator\Calculator\obj\Debug\netcoreapp3.1\Calculator.MainWindow.resources
+M:\Recipe-Calculator\Calculator\obj\Debug\netcoreapp3.1\Calculator.UI.csproj.GenerateResource.cache
+M:\Recipe-Calculator\Calculator\obj\Debug\netcoreapp3.1\Calculator.UI.GeneratedMSBuildEditorConfig.editorconfig
+M:\Recipe-Calculator\Calculator\obj\Debug\netcoreapp3.1\Calculator.UI.AssemblyInfoInputs.cache
+M:\Recipe-Calculator\Calculator\obj\Debug\netcoreapp3.1\Calculator.UI.AssemblyInfo.cs
+M:\Recipe-Calculator\Calculator\obj\Debug\netcoreapp3.1\Calculator.UI.csproj.CoreCompileInputs.cache
+M:\Recipe-Calculator\Calculator\obj\Debug\netcoreapp3.1\Calculator.UI.dll
+M:\Recipe-Calculator\Calculator\obj\Debug\netcoreapp3.1\Calculator.UI.pdb
+M:\Recipe-Calculator\Calculator\obj\Debug\netcoreapp3.1\Calculator.UI.genruntimeconfig.cache

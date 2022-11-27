@@ -1,0 +1,11 @@
+M:\Recipe-Calculator\Calculator.BL\bin\Debug\Calculator.BL.dll
+M:\Recipe-Calculator\Calculator.BL\bin\Debug\Calculator.BL.pdb
+M:\Recipe-Calculator\Calculator.BL\bin\Debug\Newtonsoft.Json.dll
+M:\Recipe-Calculator\Calculator.BL\bin\Debug\Newtonsoft.Json.xml
+M:\Recipe-Calculator\Calculator.BL\obj\Debug\Calculator.BL.csproj.AssemblyReference.cache
+M:\Recipe-Calculator\Calculator.BL\obj\Debug\Calculator.BL.csproj.CoreCompileInputs.cache
+M:\Recipe-Calculator\Calculator.BL\obj\Debug\Calculator.BL.csproj.CopyComplete
+M:\Recipe-Calculator\Calculator.BL\obj\Debug\Calculator.BL.dll
+M:\Recipe-Calculator\Calculator.BL\obj\Debug\Calculator.BL.pdb
+M:\Recipe-Calculator\Calculator.BL\bin\Debug\Calculator.MODEL.dll
+M:\Recipe-Calculator\Calculator.BL\bin\Debug\Calculator.MODEL.pdb
