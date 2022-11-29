@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Calculator.MODEL.Models
+namespace Calculator.DAL.Models
 {
     public class Result
     {

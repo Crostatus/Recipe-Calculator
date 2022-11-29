@@ -40,9 +40,7 @@ namespace Calculator.UT
         {
             JSONLoader loader = new JSONLoader();
 
-            loader.LoadData();
-
-
+            loader.LoadRecipes();
         }
     }
 }

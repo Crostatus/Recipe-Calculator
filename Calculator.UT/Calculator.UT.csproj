@@ -63,6 +63,10 @@
       <Project>{974095B8-0D17-4E4D-A476-9A08C4FE8440}</Project>
       <Name>Calculator.BL</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Calculator.DAL\Calculator.DAL.csproj">
+      <Project>{7F894BB9-40DA-4E12-B323-7DB94E63C093}</Project>
+      <Name>Calculator.DAL</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
