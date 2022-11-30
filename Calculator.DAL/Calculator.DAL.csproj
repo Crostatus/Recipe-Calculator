@@ -44,10 +44,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\CraftingTableRecipe.cs" />
     <Compile Include="Default data\Enums.cs" />
     <Compile Include="Models\IRecipe.cs" />
     <Compile Include="Models\JSONMekanismCT.cs" />
-    <Compile Include="Models\Recipe.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

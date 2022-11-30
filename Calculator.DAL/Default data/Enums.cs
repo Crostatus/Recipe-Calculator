@@ -8,7 +8,7 @@ namespace Calculator.DAL.Default_data
 {
     public enum Crafting
     {
-        RecipeSlot = 9
+        RecipeSlot = 9  // CARE: needs to be a perfect square
     }
 
     public abstract class PATH
