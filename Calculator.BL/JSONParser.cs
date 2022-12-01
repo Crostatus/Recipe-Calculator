@@ -44,13 +44,13 @@ namespace Calculator.BL
                         Debug.WriteLine("JSONParser.GetAndParseRecipes() - Skipping not yet supported recipe");
                         continue;
                     }
+                    recipes.Add(recipeToAdd);
                 }
                 catch (Exception ex)
                 {
                     Debug.WriteLine("JSONParser.GetAndParseRecipes() - Skipping broken recipe: " + ex.Message);
                     continue;
                 }
-                recipes.Add(recipeToAdd);
             }
 
             Debug.WriteLine("JSONParser.GetAndParseRecipes() - End - Parsed " + recipes.Count + " recipes");

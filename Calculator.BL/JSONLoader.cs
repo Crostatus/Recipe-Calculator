@@ -34,11 +34,12 @@ namespace Calculator.BL
 
             recipes = new List<JSONMekanismCTR>();
             JSONMekanismCTR craftingTableRecipe = null;
+            StreamReader fileStream;
 
             int errorAmt = 0;
             foreach (string file in Directory.EnumerateFiles(PATH.RECIPES, "*.json", SearchOption.AllDirectories))
             {
-                using (StreamReader fileStream = File.OpenText(file))
+                using (fileStream = File.OpenText(file))
                 {
                     try
                     {
@@ -57,7 +58,7 @@ namespace Calculator.BL
                 }
             }
             Debug.WriteLine("JSONLoader.LoadRecipes() - Loaded " + recipes.Count + " recipes succesfully");
-            Debug.WriteLine("JSONLoader.LoadRecipes() - Failed to load " + recipes  + " recipes");
+            Debug.WriteLine("JSONLoader.LoadRecipes() - Failed to load " + errorAmt + " recipes");
             
             Debug.WriteLine("JSONLoader.LoadRecipes() - End");
             return recipes;
