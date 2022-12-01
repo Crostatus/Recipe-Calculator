@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Calculator.DAL.Default_data;
 using Calculator.DAL.Models;
+using Calculator.MODEL.Models;
 
 namespace Calculator.BL
 {
@@ -32,11 +33,15 @@ namespace Calculator.BL
                 {
                     if (recipe != null && recipe.type == TAG.CRAFTING_TABLE)
                     {
-                        Debug.WriteLine("JSONParser.GetAndParseRecipes() - Skipping not yet supported recipe");
-                        RisolveCraftingTablePattern(recipe.pattern, recipe.key);
+                        recipeToAdd = new CraftingTableRecipe
+                        {
+                            result = ParseTagAndItem(recipe.result.tag, recipe.result.item),
+                            recipe = ResolveCraftingTablePattern(recipe.pattern, recipe.key)
+                        };
                     }
                     else
                     {
+                        Debug.WriteLine("JSONParser.GetAndParseRecipes() - Skipping not yet supported recipe");
                         continue;
                     }
                 }
@@ -45,51 +50,76 @@ namespace Calculator.BL
                     Debug.WriteLine("JSONParser.GetAndParseRecipes() - Skipping broken recipe: " + ex.Message);
                     continue;
                 }
-                //recipes.Add(recipeToAdd);
+                recipes.Add(recipeToAdd);
             }
-            Debug.WriteLine("JSONParser.GetAndParseRecipes() - Parsed " + recipes.Count + " recipes");
-            Debug.WriteLine("JSONParser.GetAndParseRecipes() - End");
-            return recipes; // recipe type needs to be more general and hold all different recipes, not only crafting
+
+            Debug.WriteLine("JSONParser.GetAndParseRecipes() - End - Parsed " + recipes.Count + " recipes");
+            return recipes; // recipe type needs to be more general and hold all different recipes, not only crafting 4 Mekanism
         }
 
-        private CraftingTableRecipe[] RisolveCraftingTablePattern(List<string> pattern, Dictionary<string, Result> key)
+        private CraftingTableRecipe[] ResolveCraftingTablePattern(List<string> pattern, Dictionary<string, Result> key)
         {
+            Debug.WriteLine("JSONParser.ResolveCraftingTablePattern() - Start");
             CraftingTableRecipe[] result = new CraftingTableRecipe[(int)Crafting.RecipeSlot];
-
-            int rowLenght = (int) Math.Sqrt((int)Crafting.RecipeSlot);
-            bool foundInKey;
-            Result JSONKeyContent;
-            int colIndex = 0;
-            int rowIndex = 0;
+            
+            int index = 0;
             foreach (string row in pattern)
             {
                 foreach (char cell in row)
                 {
-                    if(cell == ' ')
+                    if(index >= result.Length)
                     {
-                        result[colIndex % result.Length] = null;
+                        throw new InvalidOperationException("JSONParser.ResolveCraftingTablePattern() - Index out of bound: Index: " + index + " Max: " + result.Length);
+                    }
+                    else if(cell == ' ')
+                    {
+                        result[index] = null;
                     }
                     else
                     {
-                        foundInKey = key.TryGetValue(cell.ToString(), out JSONKeyContent);
-                        if (foundInKey)
+                        if (key.TryGetValue(cell.ToString(), out Result JSONKeyContent))
                         {
-                            //result[colIndex % result.Length] = DA PARSARE
-                            //
+                            result[index] = new CraftingTableRecipe(ParseTagAndItem(JSONKeyContent.tag, JSONKeyContent.item));
                         }
                         else
                         {
-                            result[colIndex % result.Length] = null;
+                            Debug.WriteLine("JSONParser.ResolveCraftingTablePattern() - Very sus: unable to map pattern key in the 'keys' Dictionary");
+                            result[index] = null;
                         }
                     }
-                    colIndex = (rowIndex * rowLenght) + (colIndex + 1);
+                    index++;
                 }
-                rowIndex++;
-                colIndex = 0;
+            }
+            Debug.WriteLine("JSONParser.ResolveCraftingTablePattern() - End");
+            return result;
+        }
+
+        private BlockID ParseTagAndItem(string tag, string item)
+        {
+            bool bTag = !string.IsNullOrEmpty(tag);
+            bool bItem = !string.IsNullOrEmpty(item);
+
+            if(bTag && bItem)
+            {
+                throw new InvalidOperationException("JSONParser.ParseTagAndItem() - BlocksID cannot have both tag and item! tag: " + tag + " item: " + item);
+            }
+            
+            string stringToParse;
+            if(bTag)
+            {
+                stringToParse = tag;
+            }
+            else
+            {
+                stringToParse = item; 
             }
 
-
-            return result;
+            string[] vals = stringToParse.Split(':');   // Safe enough for now
+            return new BlockID
+            {
+                modSource = vals[0],
+                blockName = vals[1]
+            };
         }
 
     }

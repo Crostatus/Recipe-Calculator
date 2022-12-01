@@ -1,4 +1,5 @@
 ﻿using Calculator.DAL.Default_data;
+using Calculator.MODEL.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,19 +10,25 @@ namespace Calculator.DAL.Models
 {
     public class CraftingTableRecipe //: IRecipe
     {
-        public string result { get; set; }
-        public string tag { get; set; }
-        public string type { get; set; }
+        public BlockID result { get; set; }
 
+        public CraftingTableRecipe[] recipe { get; set; }
 
-        private CraftingTableRecipe[] craftingTable;
-
-        public CraftingTableRecipe(string result, string tag)
+        public CraftingTableRecipe()
         {
-            this.result = result;
-            this.tag = tag;
+        }
 
-            craftingTable = new CraftingTableRecipe[(int)Crafting.RecipeSlot];
+        public CraftingTableRecipe(BlockID res)
+        {
+            this.result = res;
+            result = null;          // result        == null => Raw item
+            recipe = null;   // craftingTable == null => Raw item
+        }
+
+        public CraftingTableRecipe(BlockID res, CraftingTableRecipe[] ct)
+        {
+            this.result = res;
+            recipe = ct;   
         }
 
 
