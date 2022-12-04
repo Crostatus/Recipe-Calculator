@@ -1,4 +1,5 @@
 ﻿using Calculator.BL;
+using Calculator.MODEL;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Newtonsoft.Json;
 using System;
@@ -41,6 +42,16 @@ namespace Calculator.UT
             JSONLoader loader = new JSONLoader();
 
             loader.LoadRecipes();
+        }
+
+        [TestMethod]
+        public void TestRecipeCost()
+        {
+            RecipesContainer loader = new RecipesContainer();
+            loader.LoadData();
+
+            List<RecipeCost> costs = loader.GetBlockCost(new MODEL.Models.BlockID { modSource = "mekanism", blockName = "boiler_casing" });
+
         }
     }
 }
