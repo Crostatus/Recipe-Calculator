@@ -289,3 +289,6 @@ __pycache__/
 *.xsd.cs
 
 *.dll
+*.cache
+
+*.editorconfig

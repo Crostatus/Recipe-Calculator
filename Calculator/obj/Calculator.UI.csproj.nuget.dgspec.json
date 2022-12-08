@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "M:\\Recipe-Calculator\\Calculator\\Calculator.UI.csproj": {}
+    "C:\\Users\\andre\\source\\repos\\Recipe-Calculator\\Calculator\\Calculator.UI.csproj": {}
   },
   "projects": {
-    "M:\\Recipe-Calculator\\Calculator\\Calculator.UI.csproj": {
+    "C:\\Users\\andre\\source\\repos\\Recipe-Calculator\\Calculator\\Calculator.UI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "M:\\Recipe-Calculator\\Calculator\\Calculator.UI.csproj",
+        "projectUniqueName": "C:\\Users\\andre\\source\\repos\\Recipe-Calculator\\Calculator\\Calculator.UI.csproj",
         "projectName": "Calculator.UI",
-        "projectPath": "M:\\Recipe-Calculator\\Calculator\\Calculator.UI.csproj",
-        "packagesPath": "C:\\Users\\Andrea\\.nuget\\packages\\",
-        "outputPath": "M:\\Recipe-Calculator\\Calculator\\obj\\",
+        "projectPath": "C:\\Users\\andre\\source\\repos\\Recipe-Calculator\\Calculator\\Calculator.UI.csproj",
+        "packagesPath": "C:\\Users\\andre\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\andre\\Source\\Repos\\Recipe-Calculator\\Calculator\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Andrea\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\andre\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -45,7 +45,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -57,7 +58,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }
